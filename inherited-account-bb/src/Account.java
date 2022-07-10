@@ -18,7 +18,7 @@ public abstract class Account {
 
 	public abstract void deposit(double amount);
 	
-	public void withdraw(double amount) {
+	public void withdraw(double amount) throws NotEnoughFundsException {
 		
 		if (this.balance < amount) {
 			
@@ -31,7 +31,7 @@ public abstract class Account {
 		
 	}
 
-	public void transfer(double amount, Account dest) {
+	public void transfer(double amount, Account dest) throws NotEnoughFundsException {
 			
 		this.withdraw(amount);
 		dest.deposit(amount);

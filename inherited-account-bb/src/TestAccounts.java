@@ -1,7 +1,7 @@
 
 public class TestAccounts {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws NotEnoughFundsException {
 
 		CheckingAccount ca = new CheckingAccount(111, 111);
 		ca.deposit(100.0);

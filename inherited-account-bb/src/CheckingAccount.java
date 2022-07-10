@@ -15,7 +15,7 @@ public class CheckingAccount extends Account implements Tributable {
 	}
 
 	@Override
-	public void withdraw(double amount) {
+	public void withdraw(double amount) throws NotEnoughFundsException {
 		
 		double withdrawAmount = amount + 0.2;
 		super.withdraw(withdrawAmount);

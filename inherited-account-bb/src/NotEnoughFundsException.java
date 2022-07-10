@@ -1,5 +1,5 @@
 
-public class NotEnoughFundsException extends RuntimeException {
+public class NotEnoughFundsException extends Exception {
 
 	public NotEnoughFundsException(String message) {
 
