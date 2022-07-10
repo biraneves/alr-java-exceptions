@@ -7,8 +7,9 @@ public class StackAnalysis {
 		try {
 			method1();
 		} catch (ArithmeticException e) {
-			String msg = e.getMessage();
-			System.out.println("ArithmeticException: " + msg);
+//			String msg = e.getMessage();
+//			System.out.println("ArithmeticException: " + msg);
+			e.printStackTrace();
 		}
 		System.out.println("Main end");
 
