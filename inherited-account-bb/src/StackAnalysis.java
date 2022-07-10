@@ -12,7 +12,12 @@ public class StackAnalysis {
 	public static void method1() {
 		
 		System.out.println("Method1 init");
-		method2();
+		try {
+			method2();
+		} catch (ArithmeticException e) {
+			System.out.println("ArithmeticException");
+		}
+		
 		System.out.println("Method1 end");
 		
 	}
@@ -25,13 +30,7 @@ public class StackAnalysis {
 		
 			System.out.println(i);
 			
-			try {
 				int a = i / 0;
-			} catch (ArithmeticException e) {
-				
-				System.out.println("ArithmeticException");
-				
-			}
 			
 		}
 		
