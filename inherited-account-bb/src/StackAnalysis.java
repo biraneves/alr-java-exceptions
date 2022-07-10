@@ -24,7 +24,14 @@ public class StackAnalysis {
 		for (int i = 1; i <= 5; i++) {
 		
 			System.out.println(i);
-			int a = i / 0;
+			
+			try {
+				int a = i / 0;
+			} catch (ArithmeticException e) {
+				
+				System.out.println("ArithmeticException");
+				
+			}
 			
 		}
 		
