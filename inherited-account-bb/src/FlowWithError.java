@@ -6,17 +6,20 @@ public class FlowWithError {
 		System.out.println("Main init");
 		
 		try {
+			
 			method1();
-		} catch (ArithmeticException | NullPointerException e) {
-			String msg = e.getMessage();
-			e.printStackTrace();
+			
+		} catch (Exception e) {
+			
+			
+			
 		}
 		
 		System.out.println("Main end");
 		
 	}
 	
-	public static void method1() {
+	public static void method1() throws MyException {
 		
 		System.out.println("Method1 init");
 		method2();
@@ -27,9 +30,7 @@ public class FlowWithError {
 	public static void method2() {
 		
 		System.out.println("Method2 init");
-		
 		method2();
-		
 		System.out.println("Method2 end");
 		
 	}
