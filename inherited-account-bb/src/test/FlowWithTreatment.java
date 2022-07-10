@@ -1,3 +1,4 @@
+package test;
 
 public class FlowWithTreatment {
 
@@ -21,7 +22,7 @@ public class FlowWithTreatment {
 		System.out.println("Method1 init");
 		try {
 			method2();
-		} catch (MyException e) {
+		} catch (model.MyException e) {
 			String msg = e.getMessage();
 			System.out.println("Exception: " + msg);
 		}
@@ -30,11 +31,11 @@ public class FlowWithTreatment {
 		
 	}
 	
-	public static void method2() throws MyException {
+	public static void method2() throws model.MyException {
 		
 		System.out.println("Method2 init");
 		
-		throw new MyException("It really went wrong!");
+		throw new model.MyException("It really went wrong!");
 		
 //		System.out.println("Method2 end");
 		

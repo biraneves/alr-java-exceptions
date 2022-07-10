@@ -1,3 +1,6 @@
+package test;
+
+import model.AccountException;
 
 public class StackAnalysis {
 

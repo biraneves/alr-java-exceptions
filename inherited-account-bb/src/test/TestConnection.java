@@ -1,9 +1,10 @@
+package test;
 
 public class TestConnection {
 	
 	public static void main(String [] args) {
 		
-		try (Connection con = new Connection()) {
+		try (model.Connection con = new model.Connection()) {
 			
 			con.readData();
 			

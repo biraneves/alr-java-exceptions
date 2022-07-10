@@ -1,9 +1,13 @@
+package test;
+
+import model.Account2;
+import model.MyException;
 
 public class AccountCheckedException {
 
 	public static void main(String[] args) {
 
-		Account2 account = new Account2();
+		model.Account2 account = new model.Account2();
 		
 		try {
 			

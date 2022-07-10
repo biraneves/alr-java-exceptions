@@ -1,9 +1,10 @@
+package test;
 
 public class TestWithdraw {
 
 	public static void main(String[] args) {
 		
-		Account account = new CheckingAccount(123, 321);
+		model.Account account = new model.CheckingAccount(123, 321);
 		
 		account.deposit(200.0);
 		

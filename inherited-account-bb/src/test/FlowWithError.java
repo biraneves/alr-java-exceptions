@@ -1,3 +1,4 @@
+package test;
 
 public class FlowWithError {
 
@@ -19,7 +20,7 @@ public class FlowWithError {
 		
 	}
 	
-	public static void method1() throws MyException {
+	public static void method1() throws model.MyException {
 		
 		System.out.println("Method1 init");
 		method2();

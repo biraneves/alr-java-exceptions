@@ -1,14 +1,15 @@
+package test;
 
 public class TestTributables {
 
 	public static void main(String[] args) {
 
-		CheckingAccount ca = new CheckingAccount(222	, 333);
+		model.CheckingAccount ca = new model.CheckingAccount(222	, 333);
 		ca.deposit(100.0);
 		
-		LifeInsurance li = new LifeInsurance();
+		model.LifeInsurance li = new model.LifeInsurance();
 		
-		TaxCalculator tc = new TaxCalculator();
+		model.TaxCalculator tc = new model.TaxCalculator();
 		tc.register(ca);
 		tc.register(li);
 		
