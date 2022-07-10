@@ -1,5 +1,13 @@
 package com.biraneves.bb.bank.model;
 
+/**
+ * A class that represents the structure of an account.
+ * 
+ * @author biraneves
+ * @version 0.1.0
+ *
+ */
+
 public abstract class Account {
 
 	protected double balance;
@@ -7,6 +15,13 @@ public abstract class Account {
 	private int number;
 	private Customer accountHolder;
 	private static int total = 0;
+	
+	/**
+	 * Constructor to build an account from agency and number.
+	 * 
+	 * @param agency
+	 * @param number
+	 */
 	
 	public Account(int agency, int number) {
 		
@@ -18,6 +33,13 @@ public abstract class Account {
 	}
 
 	public abstract void deposit(double amount);
+	
+	/**
+	 * Function to withdraw an amount from an account.
+	 * 
+	 * @param amount
+	 * @throws NotEnoughFundsException
+	 */
 	
 	public void withdraw(double amount) throws NotEnoughFundsException {
 		

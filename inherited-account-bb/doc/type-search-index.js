@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"com.biraneves.bb.bank.model","l":"Account"},{"l":"All Classes","url":"allclasses-index.html"}]
