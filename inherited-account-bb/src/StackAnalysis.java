@@ -10,6 +10,9 @@ public class StackAnalysis {
 //			String msg = e.getMessage();
 //			System.out.println("ArithmeticException: " + msg);
 			e.printStackTrace();
+		} catch (NullPointerException e) {
+			String msg = e.getMessage();
+			System.out.println("NullPointerException: " + msg);
 		}
 		System.out.println("Main end");
 
@@ -31,7 +34,10 @@ public class StackAnalysis {
 		
 			System.out.println(i);
 			
-				int a = i / 0;
+//				int a = i / 0;
+			
+			AccountException ae = null;
+			ae.deposit(100.0);
 			
 		}
 		
