@@ -7,7 +7,7 @@ public class FlowWithTreatment {
 		
 		try {
 			method1();
-		} catch (ArithmeticException | NullPointerException | MyException e) {
+		} catch (ArithmeticException | NullPointerException e) {
 			String msg = e.getMessage();
 			e.printStackTrace();
 		}
@@ -19,12 +19,18 @@ public class FlowWithTreatment {
 	public static void method1() {
 		
 		System.out.println("Method1 init");
-		method2();
-		System.out.println("Mehotd2 end");
+		try {
+			method2();
+		} catch (MyException e) {
+			String msg = e.getMessage();
+			System.out.println("Exception: " + msg);
+		}
+		
+		System.out.println("Method2 end");
 		
 	}
 	
-	public static void method2() {
+	public static void method2() throws MyException {
 		
 		System.out.println("Method2 init");
 		

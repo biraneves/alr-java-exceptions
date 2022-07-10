@@ -7,7 +7,7 @@ public class FlowWithError {
 		
 		try {
 			method1();
-		} catch (ArithmeticException | NullPointerException | MyException e) {
+		} catch (ArithmeticException | NullPointerException e) {
 			String msg = e.getMessage();
 			e.printStackTrace();
 		}
