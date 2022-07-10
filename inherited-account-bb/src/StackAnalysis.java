@@ -6,13 +6,10 @@ public class StackAnalysis {
 		System.out.println("Main init");
 		try {
 			method1();
-		} catch (ArithmeticException e) {
-//			String msg = e.getMessage();
-//			System.out.println("ArithmeticException: " + msg);
-			e.printStackTrace();
-		} catch (NullPointerException e) {
+		} catch (ArithmeticException | NullPointerException e) {
 			String msg = e.getMessage();
-			System.out.println("NullPointerException: " + msg);
+			System.out.println("Exception: " + msg);
+			e.printStackTrace();
 		}
 		System.out.println("Main end");
 
