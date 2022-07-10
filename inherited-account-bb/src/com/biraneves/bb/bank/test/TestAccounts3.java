@@ -1,4 +1,4 @@
-package test;
+package com.biraneves.bb.bank.test;
 
 public class TestAccounts3 {
 

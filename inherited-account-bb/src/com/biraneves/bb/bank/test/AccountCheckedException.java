@@ -1,13 +1,12 @@
-package test;
+package com.biraneves.bb.bank.test;
 
-import model.Account2;
-import model.MyException;
+import com.biraneves.bb.bank.model.*;
 
 public class AccountCheckedException {
 
 	public static void main(String[] args) {
 
-		model.Account2 account = new model.Account2();
+		Account2 account = new Account2();
 		
 		try {
 			

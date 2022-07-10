@@ -1,4 +1,6 @@
-package test;
+package com.biraneves.bb.bank.test;
+
+import com.biraneves.bb.bank.model.*;
 
 public class FlowWithError {
 
@@ -20,7 +22,7 @@ public class FlowWithError {
 		
 	}
 	
-	public static void method1() throws model.MyException {
+	public static void method1() throws MyException {
 		
 		System.out.println("Method1 init");
 		method2();

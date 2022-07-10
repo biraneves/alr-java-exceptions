@@ -1,4 +1,4 @@
-package model;
+package com.biraneves.bb.bank.model;
 
 public class LifeInsurance implements Tributable {
 	

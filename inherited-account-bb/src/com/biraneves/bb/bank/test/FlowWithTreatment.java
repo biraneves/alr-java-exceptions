@@ -1,4 +1,6 @@
-package test;
+package com.biraneves.bb.bank.test;
+
+import com.biraneves.bb.bank.model.*;
 
 public class FlowWithTreatment {
 
@@ -22,7 +24,7 @@ public class FlowWithTreatment {
 		System.out.println("Method1 init");
 		try {
 			method2();
-		} catch (model.MyException e) {
+		} catch (MyException e) {
 			String msg = e.getMessage();
 			System.out.println("Exception: " + msg);
 		}
@@ -31,11 +33,11 @@ public class FlowWithTreatment {
 		
 	}
 	
-	public static void method2() throws model.MyException {
+	public static void method2() throws MyException {
 		
 		System.out.println("Method2 init");
 		
-		throw new model.MyException("It really went wrong!");
+		throw new MyException("It really went wrong!");
 		
 //		System.out.println("Method2 end");
 		

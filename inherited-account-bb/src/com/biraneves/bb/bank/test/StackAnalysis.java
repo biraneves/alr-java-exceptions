@@ -1,6 +1,6 @@
-package test;
+package com.biraneves.bb.bank.test;
 
-import model.AccountException;
+import com.biraneves.bb.bank.model.*;
 
 public class StackAnalysis {
 
