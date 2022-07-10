@@ -18,30 +18,23 @@ public abstract class Account {
 
 	public abstract void deposit(double amount);
 	
-	public boolean withdraw(double amount) {
+	public void withdraw(double amount) {
 		
-		if (balance >= amount) {
+		if (this.balance < amount) {
 			
-			balance -= amount;
-			return true;
+			String msg = "Balance: $" + this.balance + "; amount: " + amount;
+			throw new NotEnoughFundsException(msg);
 			
 		}
 		
-		return false;
+		this.balance -= amount;
 		
 	}
 
-	public boolean transfer(double amount, Account dest) {
-		
-		if (balance >= amount) {
+	public void transfer(double amount, Account dest) {
 			
-			this.withdraw(amount);
-			dest.deposit(amount);
-			return true;
-			
-		}
-		
-		return false;
+		this.withdraw(amount);
+		dest.deposit(amount);
 		
 	}
 

@@ -15,10 +15,10 @@ public class CheckingAccount extends Account implements Tributable {
 	}
 
 	@Override
-	public boolean withdraw(double amount) {
+	public void withdraw(double amount) {
 		
 		double withdrawAmount = amount + 0.2;
-		return super.withdraw(withdrawAmount);
+		super.withdraw(withdrawAmount);
 		
 	}
 
