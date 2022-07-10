@@ -4,7 +4,11 @@ public class StackAnalysis {
 	public static void main(String[] args) {
 
 		System.out.println("Main init");
-		method1();
+		try {
+			method1();
+		} catch (ArithmeticException e) {
+			System.out.println("ArithmeticException");
+		}
 		System.out.println("Main end");
 
 	}
@@ -12,12 +16,7 @@ public class StackAnalysis {
 	public static void method1() {
 		
 		System.out.println("Method1 init");
-		try {
-			method2();
-		} catch (ArithmeticException e) {
-			System.out.println("ArithmeticException");
-		}
-		
+		method2();
 		System.out.println("Method1 end");
 		
 	}
