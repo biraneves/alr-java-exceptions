@@ -8,7 +8,7 @@ package com.biraneves.bb.bank.model;
  *
  */
 
-public abstract class Account {
+public abstract class Account extends Object implements Comparable<Account> {
 
 	protected double balance;
 	private int agency;
@@ -125,7 +125,7 @@ public abstract class Account {
 	
 	public String toString() {
 		
-		String s = "CheckingAccount, Number: " + this.getNumber() + ", Agency: " + this.getAgency();
+		String s = "Account, Number: " + this.getNumber() + ", Agency: " + this.getAgency();
 		
 		return s;
 		
@@ -140,6 +140,13 @@ public abstract class Account {
 			return true;
 		
 		return false;
+		
+	}
+	
+	@Override
+	public int compareTo(Account other) {
+		
+		return Double.compare(this.balance, other.balance);
 		
 	}
 	

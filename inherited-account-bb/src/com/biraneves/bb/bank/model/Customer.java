@@ -6,6 +6,12 @@ public class Customer {
 	private String id;
 	private String profession;
 	
+	public Customer(String name) {
+		
+		this.name = name;
+		
+	}
+	
 	public String getName() {
 		
 		return name;
