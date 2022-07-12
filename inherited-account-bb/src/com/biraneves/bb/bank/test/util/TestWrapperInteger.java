@@ -3,7 +3,7 @@ package com.biraneves.bb.bank.test.util;
 import java.util.ArrayList;
 import com.biraneves.bb.bank.model.*;
 
-public class Test {
+public class TestWrapperInteger {
 
 	public static void main(String[] args) {
 
