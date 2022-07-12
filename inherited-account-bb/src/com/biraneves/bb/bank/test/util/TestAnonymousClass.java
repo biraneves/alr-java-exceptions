@@ -10,7 +10,7 @@ import com.biraneves.bb.bank.model.CheckingAccount;
 import com.biraneves.bb.bank.model.Customer;
 import com.biraneves.bb.bank.model.SavingsAccount;
 
-public class Test {
+public class TestAnonymousClass {
 
 	public static void main(String[] args) {
 
