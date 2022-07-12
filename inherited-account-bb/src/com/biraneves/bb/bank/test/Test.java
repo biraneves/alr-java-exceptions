@@ -7,22 +7,22 @@ public class Test {
 
 	public static void main(String[] args) {
 
-		int[] ages = new int[5];
-		String[] names = new String[5];
-		
 		int age = 29;
-		
 		Integer ageRef = Integer.valueOf(age);
-//		int value = ageRef.intValue();	// 
 		System.out.println(ageRef.doubleValue());
-
+		
+		System.out.println(Integer.MIN_VALUE);
+		System.out.println(Integer.MAX_VALUE);
+		System.out.println(Integer.SIZE);
+		System.out.println(Integer.BYTES);
+		
+		int value = ageRef.intValue();
 		String s = args[0];
-//		Integer number = Integer.valueOf(s);
 		int number = Integer.parseInt(s);
-		System.out.println(number);	// Parsing
+		System.out.println(number);
 		
 		List<Integer> numbers = new ArrayList<Integer>();
-		numbers.add(29);		// Autoboxing
+		numbers.add(29);
 		
 	}
 
