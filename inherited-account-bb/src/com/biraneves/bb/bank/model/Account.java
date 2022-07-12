@@ -123,4 +123,24 @@ public abstract class Account {
 		
 	}
 	
+	public String toString() {
+		
+		String s = "CheckingAccount, Number: " + this.getNumber() + ", Agency: " + this.getAgency();
+		
+		return s;
+		
+	}
+	
+	@Override
+	public boolean equals(Object ref) {
+		
+		Account acc = (Account) ref;
+		
+		if (this.agency == acc.agency && this.number == acc.number)
+			return true;
+		
+		return false;
+		
+	}
+	
 }

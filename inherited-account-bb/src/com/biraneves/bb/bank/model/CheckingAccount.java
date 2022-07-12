@@ -30,12 +30,4 @@ public class CheckingAccount extends Account implements Tributable {
 		
 	}
 	
-	public String toString() {
-		
-		String s = "CheckingAccount, Number: " + this.getNumber() + ", Agency: " + this.getAgency();
-		
-		return s;
-		
-	}
-	
 }

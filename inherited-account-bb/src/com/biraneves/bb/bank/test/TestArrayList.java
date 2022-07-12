@@ -2,7 +2,7 @@ package com.biraneves.bb.bank.test;
 
 import com.biraneves.bb.bank.model.*;
 
-public class Test {
+public class TestArrayList {
 
 	public static void main(String[] args) {
 
