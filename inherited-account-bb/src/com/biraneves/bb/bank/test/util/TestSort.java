@@ -10,7 +10,36 @@ import com.biraneves.bb.bank.model.CheckingAccount;
 import com.biraneves.bb.bank.model.Customer;
 import com.biraneves.bb.bank.model.SavingsAccount;
 
-public class Test {
+class AccountNumberComparator implements Comparator<Account> {
+
+	@Override
+	public int compare(Account acc1, Account acc2) {
+
+		return acc1.getNumber() - acc2.getNumber();
+		
+	}
+	
+	
+	
+}
+
+class AccountHolderComparator implements Comparator<Account> {
+
+	@Override
+	public int compare(Account acc1, Account acc2) {
+		
+		String nameC1 = acc1.getAccountHolder().getName();
+		String nameC2 = acc2.getAccountHolder().getName();
+		
+		return nameC1.compareTo(nameC2);
+		
+	}
+	
+	
+	
+}
+
+public class TestSort {
 
 	public static void main(String[] args) {
 
@@ -35,36 +64,24 @@ public class Test {
 		list.add(acc2);
 		list.add(acc3);
 		list.add(acc4);
-				
-		list.sort(new Comparator<Account>() {
-
-			@Override
-			public int compare(Account acc1, Account acc2) {
-
-				return acc1.getNumber() - acc2.getNumber();
-				
-			}
-				
-		});
 		
 		for (Account o : list)
 			System.out.println(o);
 		
 		System.out.println("-------");
 		
-		list.sort(new Comparator<Account>() {
-
-			@Override
-			public int compare(Account acc1, Account acc2) {
-				
-				String nameC1 = acc1.getAccountHolder().getName();
-				String nameC2 = acc2.getAccountHolder().getName();
-				
-				return nameC1.compareTo(nameC2);
-				
-			}
-			
-		});
+//		AccountNumberComparator accountNumberComparator = new AccountNumberComparator();
+		
+		Collections.sort(list, new AccountNumberComparator());
+		
+//		list.sort(accountNumberComparator);
+		
+		for (Account o : list)
+			System.out.println(o);
+		
+		System.out.println("-------");
+		
+		list.sort(new AccountHolderComparator());
 		
 		for (Account o : list)
 			System.out.println(o + " - " + o.getAccountHolder().getName());
