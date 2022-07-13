@@ -22,7 +22,7 @@ public class TestCopy {
 		BufferedReader br = new BufferedReader(isr);
 		
 		// Output stream
-		OutputStream fos = new FileOutputStream("lorem2.txt");
+		OutputStream fos = System.out; // new FileOutputStream("lorem2.txt");
 		Writer osw = new OutputStreamWriter(fos);
 		BufferedWriter bw = new BufferedWriter(osw);
 		
@@ -32,6 +32,7 @@ public class TestCopy {
 			
 			bw.write(line);
 			bw.newLine();
+			bw.flush();
 			line = br.readLine();
 			
 		}
