@@ -32,10 +32,8 @@ public class TestScanner {
 			
 //			System.out.println(value1 + value2 + value3 + value4 + value5);
 			
-			String formattedValue = String.format("%s: agency %d, acc. number %d - %s - balance: $%.2f", accountType,
+			System.out.format(new Locale("pt", "br"),"%s: agency %d, acc. number %d - %-18s - balance: $%,10.2f%n", accountType,
 					agency, accountNumber, accountHolder, balance);
-			
-			System.out.println(formattedValue);
 			
 			lineScanner.close();
 			
