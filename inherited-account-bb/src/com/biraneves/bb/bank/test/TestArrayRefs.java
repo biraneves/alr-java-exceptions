@@ -10,7 +10,7 @@ public class TestArrayRefs {
 		
 		CheckingAccount acc1 = new CheckingAccount(22, 11);
 		SavingsAccount acc2 = new SavingsAccount(22, 22);
-		Customer customer = new Customer();
+		Customer customer = new Customer("Doe");
 		
 		refs[0] = acc1;
 		refs[1] = acc2;
