@@ -15,7 +15,7 @@ public class TestScanner {
 		while (scanner.hasNextLine()) {
 			
 			String line = scanner.nextLine();
-			System.out.println(line);
+//			System.out.println(line);
 			
 //			String[] values = line.split(",");
 //			System.out.println(Arrays.toString(values));
@@ -24,13 +24,18 @@ public class TestScanner {
 			lineScanner.useLocale(Locale.US);
 			lineScanner.useDelimiter(",");
 			
-			String value1 = lineScanner.next();
-			int value2 = lineScanner.nextInt();
-			int value3 = lineScanner.nextInt();
-			String value4 = lineScanner.next();
-			double value5 = lineScanner.nextDouble();
+			String accountType = lineScanner.next();
+			int agency = lineScanner.nextInt();
+			int accountNumber = lineScanner.nextInt();
+			String accountHolder = lineScanner.next();
+			double balance = lineScanner.nextDouble();
 			
-			System.out.println(value1 + value2 + value3 + value4 + value5);
+//			System.out.println(value1 + value2 + value3 + value4 + value5);
+			
+			String formattedValue = String.format("%s: agency %d, acc. number %d - %s - balance: $%.2f", accountType,
+					agency, accountNumber, accountHolder, balance);
+			
+			System.out.println(formattedValue);
 			
 			lineScanner.close();
 			
