@@ -15,7 +15,12 @@ public class TestReading {
 		
 		String line = br.readLine();
 		
-		System.out.println(line);
+		while (line != null && !line.isEmpty()) {
+			
+			System.out.println(line);
+			line = br.readLine();
+			
+		}
 		
 		br.close();
 		
